@@ -19,7 +19,7 @@ def lambda_handler(event, context):
             Key={
                 'PlayerName': player_name
             })
-        if 'Item' in match_response:
+        if 'Item' in match_response and 'ConnectionInfo' in match_response['Item']:
             print(match_response['Item'])
             connection_info = json.loads(match_response['Item']['ConnectionInfo'])
             if connection_info['status'] == 'matching':
