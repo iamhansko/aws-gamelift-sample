@@ -3,7 +3,7 @@ from botocore.exceptions import ClientError
 import json
 import time
 
-dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
+dynamodb = boto3.resource('dynamodb')
 ddb_table = dynamodb.Table('GomokuPlayerInfo')
 
 def lambda_handler(event, context):

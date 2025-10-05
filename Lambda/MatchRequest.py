@@ -16,7 +16,7 @@ class DecimalEncoder(json.JSONEncoder):
         
 
 gl_client = boto3.client('gamelift')
-dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
+dynamodb = boto3.resource('dynamodb')
 
 ddb_table = dynamodb.Table('GomokuPlayerInfo')
 
